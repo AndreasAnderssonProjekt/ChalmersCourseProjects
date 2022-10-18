@@ -1,2 +1,2 @@
 # Passion Projects
-A repository dedicated to my passion projects.
+A repository dedicated to passion projects.
