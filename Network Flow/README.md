@@ -6,3 +6,8 @@ The pipeline network described above can be thought of as a flow network. A flow
 * Each edge $e$ is associated with a capacity, which is a nonnegative integer denoted $c_{e}$.
 * There is a single source node denoted $s\in V$.
 * There is a single sink node denoted $t \in V$.
+
+Nodes other than the source and sink are called internal nodes.
+
+To make sure that our flow network obey the laws of physics we introduce the following constraints:
+* $0 \leq f(e) \leq c_{e}, \forall e\in E$
