@@ -25,6 +25,10 @@ that is, the flow pushed from the source.
 
 MFP can thus be defined as the optimization problem $\max\limits_{f} v(f)$.
 
-To solve this optimization problem we will use the Ford-Fulkerson algorithm. The Ford-Fulkerson iteratively push flow from the source in a systematic way that respect the constraints. The implementation of the Ford-Fulkerson utilizes a concept called residual graphs. Given a graph $G=(V,E)$, and a flow $f$ on $G$, we define the residual graph $G_{f}$ of $G$ with respect to $f$ as follows:
+To solve this optimization problem we will use the Ford-Fulkerson algorithm. The Ford-Fulkerson algorithm iteratively push flow from the source in a systematic way that respect the constraints. The implementation of the Ford-Fulkerson utilizes a concept called residual graphs. Given a graph $G=(V,E)$, and a flow $f$ on $G$, we define the residual graph $G_{f}$ of $G$ with respect to $f$ as follows:
 * The vertex set of $G$ and $G_{f}$ is identical.
 * For each edge $(u,v) = e\in E$ of $G$, the residual graph $G_{f}$ has two edges, a forward edge and a backward edge. The forward edge goes from u to v and has a capacity of $c_{e}-f(e)$, that is, the maximum additional flow that can can be carried by the edge given that it currently carries f(e) flow. The backward edge goes from v to u and has a capacity of $f(e)$, that is, the flow that can be "pushed back".
+
+The Ford-Fulkerson algorithm initially start with a flow network where $f(e)=0$ for all edges. The corresponding residual graph is thus the graph where all its forward edges has a capacity of $c_{e}$ and all its backward edges a capacity of 0. Given this initial flow network, the Ford-Fulkerson algorithm then iteratively pushes flow from the source in the following way: Let P be a simple s-t path in $G_{f}$ and let b=bottleneck(f,P) be the minimum residual capacity of any edge on P, with respect to the flow f. We then push b units of flow along all edges of P and update their capacities. If we push b units along a forward edge we decrease its capacity by b and increase the capacity of its corresponding backward edge by b. Similarly, if we instead push b units along a backward edge we decrease its capacity by b and increase the capacity of its corresponding forward edge by b.
+
+We can now formulate the Ford-Fulkerson algorithm:
