@@ -23,4 +23,8 @@ The value of a flow is defined as
 $v(f) = f(s)^{\text{out}}$,
 that is, the flow pushed from the source.
 
-MFP can thus be defined as an optimization problem $\max\limits_{f} v(f)$.
+MFP can thus be defined as the optimization problem $\max\limits_{f} v(f)$.
+
+To solve this optimization problem we will use the Ford-Fulkerson algorithm. The Ford-Fulkerson iteratively push flow from the source in a systematic way that respect the constraints. The implementation of the Ford-Fulkerson utilizes a concept called residual graphs. Given a graph $G=(V,E)$, and a flow $f$ on $G$, we define the residual graph $G_{f}$ of $G$ with respect to $f$ as follows:
+* The vertex set of $G$ and $G_{f}$ is identical.
+* For each edge $(u,v) = e\in E$ of $G$, the residual graph $G_{f}$ has two edges, a forward edge and a backward edge. The forward edge goes from u to v and has a capacity of $c_{e}-f(e)$, that is, the maximum additional flow that can can be carried by the edge given that it currently carries f(e) flow. The backward edge goes from v to u and has a capacity of $f(e)$, that is, the flow that can be "pushed back".
