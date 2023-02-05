@@ -12,5 +12,5 @@ The source node and sink node have unique properties, different from the other n
 To continue we define flow. Flow is a function $f : E \rightarrow \mathbb{N}$ that maps each edge to a real non-negative integer. The value $f(e)$ corresponds to the amount of flow carried by edge e.
 
 To make sure that our flow network obey the laws of physics we introduce the following constraints:
-* $0 \leq f(e) \leq c_{e}, \forall e\in E \quad$ (capacity constraint).
-* 
+* $0 \leq f(e) \leq c_{e}, \quad \forall e\in E \quad$ (capacity constraint).
+* $\sum_{e in to v} f(e) = \sum_{e out of v} f(e) \quad \forall v \neq s,t \in V \quad$ (conservation constraint). 
