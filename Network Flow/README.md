@@ -15,6 +15,13 @@ To make sure that our flow network obey the laws of physics we introduce the fol
 * $0 \leq f(e) \leq c_{e}, \quad \forall e\in E \quad$ (capacity constraint).
 * $\sum_{\text{e in to v}} f(e) = \sum_{\text{e out of v}} f(e) \quad \forall v \neq s,t \in V \quad$ (conservation constraint). 
 
-For convenience purposes, introduce the following notation
+For convenience, introduce the following notation
 * $f(v)^{\text{in}} = \sum_{\text{e in to v}} f(e)$.
 * $f(v)^{\text{out}} = \sum_{\text{e out of v}} f(e)$.
+
+The value of a flow is defined as
+$v(f) = f(s)^{\text{out}}$,
+that is the flow pushed from the source.
+
+MFP is thus
+$ max v(f)$
