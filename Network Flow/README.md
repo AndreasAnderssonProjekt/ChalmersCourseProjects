@@ -33,7 +33,7 @@ The Ford-Fulkerson algorithm initially start with a flow network where $f(e)=0$ 
 
 The Ford-Fulkerson algorithm can be described in terms of psuedo code as follows
 
-
+    augment(P, f)
     b = bottleneck(P, f)
     For each edge (u, v) ∈ P
        If e = (u, v) is a forward edge then
