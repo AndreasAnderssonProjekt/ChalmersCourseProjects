@@ -9,7 +9,7 @@ The pipeline network described above can be thought of as a flow network. A flow
 
 The source node and sink node have unique properties, different from the other nodes. There is no incoming edges to the source node and there is no outgoing edges from the sink node. Nodes other than the source and sink are called internal nodes.
 
-To continue we define flow. Flow is a function $f : E \rightarrow \mathbf{R}$
+To continue we define flow. Flow is a function $f : E \rightarrow \mathbb{N}$ that maps each edge to a real non-negative integer.
 
 To make sure that our flow network obey the laws of physics we introduce the following constraints:
 * $0 \leq f(e) \leq c_{e}, \forall e\in E$ (Capacity constraint).
