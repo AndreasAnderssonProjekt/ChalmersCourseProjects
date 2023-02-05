@@ -7,7 +7,7 @@ The pipeline network described above can be thought of as a flow network. A flow
 * There is a single source node denoted $s\in V$.
 * There is a single sink node denoted $t \in V$.
 
-The source node and sink node have unique properties, different from the other nodes. There is no incoming edges to the source node and there is no outgoing edges from the sink node. Nodes other than the source and sink are called internal nodes.
+The source node and sink node have unique properties, different from those of the other nodes. There is no incoming edges to the source node and there is no outgoing edges from the sink node. Nodes other than the source and sink are called internal nodes.
 
 To continue we define flow. Flow is a function $f : E \rightarrow \mathbb{N}$ that maps each edge to a real non-negative integer. The value $f(e)$ corresponds to the amount of flow carried by edge e.
 
