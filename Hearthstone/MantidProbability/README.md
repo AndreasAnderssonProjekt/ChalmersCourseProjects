@@ -18,4 +18,4 @@ to calculate $M(t,n)$ is $p_{\text{stats}}$(t,n) = prob(the t-th buff is stats g
 The odds of gaining a particular special effect (divine shield) after t buffs is obtained by summing the probabilities $M(t,n)$ for $1 \leq n \leq N$ multiplied by $p_{divine}(n)$ = prob(divine shield given n special effects) = $\frac{{N-1}\choose{n-1}}{{N}\choose{n}}$. The numerator corresponds to the number of combinations of $n$ special effects that include a particular special effect. For example, if n = 3 and N = 4 and we can label the special effects as {1,2,3,4}. The number of combinations that include, lets say special effect 1, is given by letting the first element of the triple (1,x,y) be fixed to 1 and calculating the number of ways to choose x and y, that is ${N-1}\choose{n-1}$.
 
 The odds of getting divine shield given t buffs is given by:
-* $\sum{n=1}M(t,n) * \frac{{N-1}\choose{n-1}}{{N}\choose{n}}$
+* $ \sum_{n=1} M(t,n) \cdot \frac{{N-1}\choose{n-1}}{{N}\choose{n}}$
