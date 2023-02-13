@@ -13,4 +13,4 @@ if either n-1 or n special effects have been achieved after t-1 buffs. More prec
 
 It is obvious that M(0,n)=100% for all n as we cannot obtain a special effect if no buff is triggered. We now have the initial states, M(0,n), what remains to be able
 to calculate M(t,n) is $p_{\text{stats}}$(t,n) = prob(the t-th buff is stats given n special effects) and $p_{\text{special}}$(t,n)=prob(the t-th buff is a special effect given n special effects). These probabilities depend on how many special effects are still obtainable. If there are a total of N distinct special effects and n have been obtained, there are N-n still obtainable. Thus N-n+1 buffs are available as additional stats is also a possible buff. The probability of gaining a special effect is thus given by $\frac{N-n}{N-n+1}$. and the probability of gaining stats is $\frac{1}{N-n+1}$. We now have
-* M(t,n) = M(t-1,n) * $\frac{1}{N-n+1}$  + M(t-1,n-1) * $\frac{N-n}{N-n+1}$ for $t \geq 1$
+* $M(t,n) = M(t-1,n) \cdot \frac{1}{N-n+1}  + M(t-1,n-1) \cdot \frac{N-n}{N-n+1}$ for $t \geq 1$
