@@ -12,4 +12,4 @@ if either n-1 or n special effects have been achieved after t-1 buffs. More prec
 * M(t,n) = M(t-1,n) * prob(the t-th buff is stats) + M(t-1,n-1) * prob(the t-th buff is a special effect) for $t \geq 1$.
 
 It is obvious that M(0,n)=100% for all n as we cannot obtain a special effect if no buff is triggered. We now have the initial states, M(0,n), what remains to be able
-to calculate M(t,n) is prob(the t-th buff is stats)= $p_{stats}(t) and prob(the t-th buff is a special effect)=$p_{special}(t)$.
+to calculate M(t,n) is prob(the t-th buff is stats)= $p_{\text{stats}}$(t) and prob(the t-th buff is a special effect)=$p_{\text{special}}$(t)$.
