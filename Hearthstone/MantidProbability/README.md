@@ -11,7 +11,7 @@ given a total of t buffs. The main idea is that M(t,n) only depends on the state
 if either n-1 or n special effects have been achieved after t-1 buffs. More precisely we have that
 * $M(t,n) = M(t-1,n) \cdot$ prob(the t-th buff is stats given n special effects) + $M(t-1,n-1) \cdot$ prob(the t-th buff is a special effect given n special effects) for $t \geq 1$ and $1 \leq n \leq N$,
 
-where N is the total distinct special effects. It is obvious that $M(0,n)=100$% for all n as we cannot obtain a special effect if no buff is triggered. To continue we have $M(t,0) = \frac{1}{N+1}$.  We now have the initial states, what remains to be able
+where N is the total distinct special effects. It is obvious that $M(0,n)=100$% for all n as we cannot obtain a special effect if no buff is triggered. To continue we have $M(t,0) = (\frac{1}{N+1})^{t}$.  We now have the initial states, what remains to be able
 to calculate $M(t,n)$ is $p_{\text{stats}}$(t,n) = prob(the t-th buff is stats given n special effects) and $p_{\text{special}}$(t,n)=prob(the t-th buff is a special effect given n special effects). These probabilities depend on how many special effects are still obtainable. If there are a total of N distinct special effects and n have been obtained, there are N-n still obtainable special effects. Thus N-n+1 buffs are available as additional stats is also a possible buff. The probability of gaining a special effect is thus given by $p_{\text{special}}(t,n)=\frac{N-n}{N-n+1}$. and the probability of gaining stats is $p_{\text{stats}}(t,n) =\frac{1}{N-n+1}$. We now have
 * $M(t,n) = M(t-1,n) \cdot \frac{1}{N-n+1}  + M(t-1,n-1) \cdot \frac{N-n}{N-n+1}$ for $t \geq 1$ and $1 \leq n \leq N$ . 
 
@@ -19,3 +19,6 @@ The odds of gaining a particular special effect (divine shield) after t buffs is
 
 The odds of getting divine shield given t buffs is given by:
 * $\sum_{n=1} M(t,n) \cdot \frac{{N-1}\choose{n-1}}{{N}\choose{n}}$
+
+In MantidProbability.py you find the implementation of the method described above.
+The probabilites 
