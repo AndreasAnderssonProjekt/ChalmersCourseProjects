@@ -10,4 +10,5 @@ To solve the problem we use a dynamic programming approach. We start by introduc
 given a total of t buffs. The main idea is that M(t,n) only depends on the state of the previous event. A total of n special effects after t buffs can only be achieved 
 if either n-1 or n special effects have been achieved after t-1 buffs. More precisely we have that
 * M(t,n) = M(t-1,n) * prob(next buff is stats) + M(t-1,n-1) * prob(next buff is a special effect) for $t \geq 1$.
+
 It is obvious that M(0,n)=100% for all n as we cannot obtain a special effect if no buff is triggered.
