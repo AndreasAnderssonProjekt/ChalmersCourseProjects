@@ -16,3 +16,4 @@ to calculate $M(t,n)$ is $p_{\text{stats}}$(t,n) = prob(the t-th buff is stats g
 * $M(t,n) = M(t-1,n) \cdot \frac{1}{N-n+1}  + M(t-1,n-1) \cdot \frac{N-n}{N-n+1}$ for $t \geq 1$ and $1 \leq n \leq N$ . 
 
 The odds of gaining a particular special effect (divine shield) after t buffs is obtained by summing the probabilities $M(t,n)$ for $1 \leq n \leq N$ multiplied by $p_{divine}(n)$ = prob(divine shield given n special effects) = $\frac{ {n \choose x} N-1 \choose n-1}{N \choose n}
+${N}\choose{k}$
