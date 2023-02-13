@@ -20,5 +20,11 @@ The odds of gaining a particular special effect (divine shield) after t buffs is
 The odds of getting divine shield given t buffs is given by:
 * $\sum_{n=1} M(t,n) \cdot \frac{{N-1}\choose{n-1}}{{N}\choose{n}}$
 
-In MantidProbability.py you find the implementation of the method described above.
-The probabilites 
+In MantidProbability.py you find the implementation of the method described above. 
+The output probabilites for running the program:
+
+* Probability that mantid gets divine shield after 0 buffs:  0.0
+* Probability that mantid gets divine shield after 1 buffs:  0.25
+* Probability that mantid gets divine shield after 2 buffs:  0.47916666666666663
+* Probability that mantid gets divine shield after 3 buffs:  0.6753472222222221
+* Probability that mantid gets divine shield after 4 buffs:  0.812355324074074
