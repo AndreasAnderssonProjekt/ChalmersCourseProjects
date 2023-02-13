@@ -1,3 +1,5 @@
+![Mantid](https://user-images.githubusercontent.com/116072490/218511142-7d46e284-96e4-4216-9118-47d759b69127.jpg)
+
 In hearthstone there is a card called Mantid Queen. At the start of each combat mantid gets a number of randomized buffs depending on the number of 
 distinct unit tribes you control. There are a total of four distinct buffs: additional stats, windfury, divine shield and taunt. The most sought after buff is 
 divine shield, without it, Mantid Queen is useless. The question is thus as follows: Given a number of n tribes, what are the odds of getting divine shield?
