@@ -10,7 +10,7 @@ trigger once while others may trigger infinitely many times. In this case, windf
 can be obtained multiple times. Let us call effects that may only trigger once "special effects".
 
 To solve the problem we use a dynamic programming approach. We start by introducing the function M(t,n), the probability that we trigger n special effects
-given a total of t buffs. The main idea is that M(t,n) only depends on the state of the previous event. A total of n special effects after t buffs can only be achieved 
+given a total of t buffs. The main idea is that M(t,n) only depends on the state of the previous events. A total of n special effects after t buffs can only be achieved 
 if either n-1 or n special effects have been achieved after t-1 buffs. More precisely we have that
 * $M(t,n) = M(t-1,n) \cdot$ prob(the t-th buff is stats given n special effects) + $M(t-1,n-1) \cdot$ prob(the t-th buff is a special effect given n special effects) for $t \geq 1$ and $1 \leq n \leq N$,
 
